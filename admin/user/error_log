@@ -1,0 +1,5 @@
+[17-Mar-2025 13:42:04 UTC] PHP Notice:  Undefined variable: conn in /home/softtechit/billing.softtechitservices.in/admin/user/index.php on line 2
+[17-Mar-2025 13:42:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/softtechit/billing.softtechitservices.in/admin/user/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/admin/user/index.php on line 2

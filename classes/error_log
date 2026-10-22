@@ -1,0 +1,35 @@
+[23-Feb-2025 20:56:22 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 82
+[23-Feb-2025 20:56:22 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): '/tmp/phpItBkT8' is not a valid JPEG file in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 82
+[23-Feb-2025 20:56:22 Asia/Manila] PHP Warning:  imagescale() expects parameter 1 to be resource, bool given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 100
+[23-Feb-2025 20:56:22 Asia/Manila] PHP Warning:  imagepng() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 103
+[23-Feb-2025 20:56:22 Asia/Manila] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 107
+[23-Feb-2025 20:56:38 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 82
+[23-Feb-2025 20:56:38 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): '/tmp/phphoA0xg' is not a valid JPEG file in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 82
+[23-Feb-2025 20:56:38 Asia/Manila] PHP Warning:  imagescale() expects parameter 1 to be resource, bool given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 100
+[23-Feb-2025 20:56:38 Asia/Manila] PHP Warning:  imagepng() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 103
+[23-Feb-2025 20:56:38 Asia/Manila] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 107
+[23-Feb-2025 20:57:51 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 82
+[23-Feb-2025 20:57:51 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): '/tmp/php72PAE0' is not a valid JPEG file in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 82
+[23-Feb-2025 20:57:51 Asia/Manila] PHP Warning:  imagescale() expects parameter 1 to be resource, bool given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 100
+[23-Feb-2025 20:57:51 Asia/Manila] PHP Warning:  imagepng() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 103
+[23-Feb-2025 20:57:51 Asia/Manila] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 107
+[27-Feb-2025 16:59:37 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 185
+[27-Feb-2025 16:59:37 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): '/tmp/php1G7n9c' is not a valid JPEG file in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 185
+[27-Feb-2025 16:59:37 Asia/Manila] PHP Warning:  imagescale() expects parameter 1 to be resource, bool given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 203
+[27-Feb-2025 16:59:37 Asia/Manila] PHP Warning:  imagepng() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 206
+[27-Feb-2025 16:59:37 Asia/Manila] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 210
+[27-Feb-2025 17:00:59 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 185
+[27-Feb-2025 17:00:59 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): '/tmp/phpHWwgzw' is not a valid JPEG file in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 185
+[27-Feb-2025 17:00:59 Asia/Manila] PHP Warning:  imagescale() expects parameter 1 to be resource, bool given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 203
+[27-Feb-2025 17:00:59 Asia/Manila] PHP Warning:  imagepng() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 206
+[27-Feb-2025 17:00:59 Asia/Manila] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 210
+[06-Mar-2025 23:39:49 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 185
+[06-Mar-2025 23:39:49 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): '/tmp/phpqyHZ1o' is not a valid JPEG file in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 185
+[06-Mar-2025 23:39:49 Asia/Manila] PHP Warning:  imagescale() expects parameter 1 to be resource, bool given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 203
+[06-Mar-2025 23:39:49 Asia/Manila] PHP Warning:  imagepng() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 206
+[06-Mar-2025 23:39:49 Asia/Manila] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 210
+[06-Mar-2025 23:44:58 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 185
+[06-Mar-2025 23:44:58 Asia/Manila] PHP Warning:  imagecreatefromjpeg(): '/tmp/phpCW5ydD' is not a valid JPEG file in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 185
+[06-Mar-2025 23:44:58 Asia/Manila] PHP Warning:  imagescale() expects parameter 1 to be resource, bool given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 203
+[06-Mar-2025 23:44:58 Asia/Manila] PHP Warning:  imagepng() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 206
+[06-Mar-2025 23:44:58 Asia/Manila] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /home/softtechit/billing.softtechitservices.in/classes/Master.php on line 210

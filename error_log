@@ -1,0 +1,504 @@
+[26-Feb-2025 03:43:20 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 05:43:36 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 05:44:02 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 10:55:14 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 10:55:18 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 10:55:18 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 10:55:19 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 10:59:00 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 10:59:30 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 12:40:48 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 12:59:57 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 13:02:55 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 13:02:58 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 13:02:59 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 13:03:01 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 13:03:09 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 13:03:11 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 14:55:33 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 14:56:02 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:17:46 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:17:47 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:17:49 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:17:55 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:17:57 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:18:02 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:18:04 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:18:10 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:18:24 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:18:35 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:18:55 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:25:56 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 15:32:40 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 16:10:25 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 16:10:27 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 16:12:48 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 16:16:27 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 16:16:47 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 16:17:20 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 16:17:22 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 16:22:29 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 16:22:42 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 16:22:44 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[26-Feb-2025 16:31:33 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[07-Mar-2025 10:50:23 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[07-Mar-2025 10:50:30 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[07-Mar-2025 10:50:37 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[07-Mar-2025 10:50:39 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[07-Mar-2025 10:50:44 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[07-Mar-2025 10:51:17 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[07-Mar-2025 10:51:27 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[07-Mar-2025 10:51:34 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[11-Mar-2025 04:09:49 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[11-Mar-2025 04:09:49 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[11-Mar-2025 04:09:49 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[11-Mar-2025 10:58:54 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[11-Mar-2025 11:00:10 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[14-Mar-2025 11:11:43 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[14-Mar-2025 11:20:00 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[21-Mar-2025 06:46:42 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[21-Mar-2025 06:48:42 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[04-Apr-2025 06:21:43 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[04-Apr-2025 09:40:53 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
+[04-Apr-2025 12:59:34 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php:18
+Stack trace:
+#0 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(8): DBConnection->__construct()
+#1 /home/softtechit/billing.softtechitservices.in/classes/SystemSettings.php(249): SystemSettings->__construct()
+#2 /home/softtechit/billing.softtechitservices.in/config.php(9): require_once('/home/softtechi...')
+#3 /home/softtechit/billing.softtechitservices.in/index.php(1): require_once('/home/softtechi...')
+#4 {main}
+  thrown in /home/softtechit/billing.softtechitservices.in/classes/DBConnection.php on line 18
