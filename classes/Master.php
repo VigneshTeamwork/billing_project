@@ -135,6 +135,10 @@ Class Master extends DBConnection {
 		foreach($_POST as $k =>$v){
 			if(!in_array($k,array('id'))){
 				if(!empty($data)) $data .=",";
+				if($k == 'opening_stock_date' && $v == ''){
+					$data .= " `{$k}`=NULL ";
+					continue;
+				}
 				$v = $this->conn->real_escape_string($v);
 				$data .= " `{$k}`='{$v}' ";
 			}

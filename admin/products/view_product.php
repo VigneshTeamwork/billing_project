@@ -38,6 +38,8 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
         <dd class="pl-4"><?= isset($buy_price) ? format_num($buy_price) : '' ?></dd>
         <dt class="text-muted">Selling Price</dt>
         <dd class="pl-4"><?= isset($price) ? format_num($price) : '' ?></dd>
+        <dt class="text-muted">Opening Stock</dt>
+        <dd class="pl-4"><?= isset($opening_stock) ? $opening_stock : 0 ?><?= !empty($opening_stock_date) ? ' (as on '.date("M d, Y", strtotime($opening_stock_date)).')' : '' ?></dd>
         <dt class="text-muted">Status</dt>
         <dd class="pl-4">
             <?php if($status == 1): ?>

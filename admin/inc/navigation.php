@@ -103,6 +103,14 @@
                         </p>
                       </a>
                     </li>
+					<li class="nav-item dropdown">
+                      <a href="<?php echo base_url ?>admin/?page=stock_report" class="nav-link nav-stock_report">
+                        <i class="nav-icon fas fa-boxes"></i>
+                        <p>
+                          Stock Report
+                        </p>
+                      </a>
+                    </li>
 					<!--<li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=complaint" class="nav-link nav-complaint">
                         <i class="nav-icon fas fa-bookmark"></i>

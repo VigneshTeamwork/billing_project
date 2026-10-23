@@ -167,3 +167,17 @@ UPDATE `purchase_list` SET `purchase_date` = DATE(`date_created`) WHERE `purchas
 
 ALTER TABLE `quotation_list` ADD COLUMN IF NOT EXISTS `quotation_date` date DEFAULT NULL AFTER `code`;
 UPDATE `quotation_list` SET `quotation_date` = DATE(`date_created`) WHERE `quotation_date` IS NULL;
+
+
+-- ============================================================
+-- Stock Report: Opening Stock on products
+-- Date: 2026-10-23
+-- ============================================================
+-- Stock = Opening Stock + Purchases - Invoices (cancelled bills not counted).
+-- Only purchases / invoices dated on or after `opening_stock_date`
+-- are counted; if it is empty, all history counts.
+-- Safe to run more than once.
+-- ============================================================
+
+ALTER TABLE `product_list` ADD COLUMN IF NOT EXISTS `opening_stock` int(11) NOT NULL DEFAULT 0 AFTER `price`;
+ALTER TABLE `product_list` ADD COLUMN IF NOT EXISTS `opening_stock_date` date DEFAULT NULL AFTER `opening_stock`;

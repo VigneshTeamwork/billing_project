@@ -45,6 +45,17 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 			<label for="price" class="control-label">Selling Price</label>
 			<input type="number" name="price" id="price" class="form-control form-control-sm rounded-0 text-right" value="<?php echo isset($price) ? $price : ''; ?>"  required/>
 		</div>
+		<div class="form-row">
+			<div class="form-group col-6">
+				<label for="opening_stock" class="control-label">Opening Stock</label>
+				<input type="number" min="0" name="opening_stock" id="opening_stock" class="form-control form-control-sm rounded-0 text-right" value="<?php echo isset($opening_stock) ? $opening_stock : 0; ?>"/>
+			</div>
+			<div class="form-group col-6">
+				<label for="opening_stock_date" class="control-label">Opening Stock As On</label>
+				<input type="date" name="opening_stock_date" id="opening_stock_date" class="form-control form-control-sm rounded-0" value="<?php echo isset($opening_stock_date) ? $opening_stock_date : ''; ?>"/>
+			</div>
+			<small class="text-muted col-12 mb-2" style="margin-top:-.5rem">Sales and purchases dated before this date are not counted in stock.</small>
+		</div>
 		<div class="form-group">
 			<label for="status" class="control-label">Status</label>
 			<select name="status" id="status" class="form-control form-control-sm rounded-0" required>
@@ -78,6 +89,8 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 		}
 	}
 	$(document).ready(function(){
+		// New product: opening stock counts from today (this computer's date).
+		if(!$('[name="id"]').val() && !$('#opening_stock_date').val()) $('#opening_stock_date').val(new Date().toLocaleDateString('en-CA'))
 		$('#product-form').submit(function(e){
 			e.preventDefault();
             var _this = $(this)
