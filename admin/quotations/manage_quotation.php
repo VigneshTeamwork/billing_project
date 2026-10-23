@@ -33,7 +33,7 @@ if(isset($_GET['id'])){
                             
                         </div>
                         <div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                 <div class="form-group mb-3">
                                     <label for="invoice_type" class="control-label">Quotation Type</label>
 									<select id="invoice_type" name="invoice_type" class="form-control form-control-sm rounded">
@@ -43,7 +43,13 @@ if(isset($_GET['id'])){
 									</select>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="form-group mb-3">
+                                    <label for="quotation_date" class="control-label">Quotation Date</label>
+                                    <input type="date" name="quotation_date" id="quotation_date" class="form-control form-control-sm rounded-0" value="<?= isset($quotation_date) ? $quotation_date : '' ?>" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                 <div class="form-group mb-3">
                                     <label for="customer_id" class="control-label">Select Customer</label>
 									<select id="customer_id" name="customer_id" class="form-control form-control-sm rounded">
@@ -501,6 +507,8 @@ if(isset($_GET['id'])){
         calc_total_amount()
     }
     $(function(){
+		// New quotation: default to today's date on this computer (server clock is set to a different timezone).
+		if(!$('#quotation_date').val()) $('#quotation_date').val(new Date().toLocaleDateString('en-CA'))
 		$('select#invoice_type').select2({
             placeholder:"Select Quotation Type here",
             width:'100%',

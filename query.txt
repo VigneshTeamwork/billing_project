@@ -154,3 +154,16 @@ UPDATE `transaction_list` SET `invoice_date` = DATE(`date_created`) WHERE `invoi
 
 ALTER TABLE `purchase_list` ADD COLUMN IF NOT EXISTS `purchase_date` date DEFAULT NULL AFTER `code`;
 UPDATE `purchase_list` SET `purchase_date` = DATE(`date_created`) WHERE `purchase_date` IS NULL;
+
+
+-- ============================================================
+-- Quotation Date (user-entered date on quotation create / edit)
+-- Date: 2026-10-23
+-- ============================================================
+-- New column on `quotation_list`. Existing quotations get the date
+-- they were created, so their printed date does not change.
+-- Safe to run more than once.
+-- ============================================================
+
+ALTER TABLE `quotation_list` ADD COLUMN IF NOT EXISTS `quotation_date` date DEFAULT NULL AFTER `code`;
+UPDATE `quotation_list` SET `quotation_date` = DATE(`date_created`) WHERE `quotation_date` IS NULL;
