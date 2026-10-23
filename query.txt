@@ -1,0 +1,33 @@
+-- ============================================================
+-- Document Numbering settings (GST / Non-GST invoice, Quotation)
+-- Date: 2026-10-23
+-- ============================================================
+-- No table structure change (no ALTER / CREATE needed).
+-- The feature stores 9 new rows in the existing `system_info` table.
+--
+-- These rows are also created automatically the first time you click
+-- "Update" on Settings, and the code falls back to the same defaults
+-- if they are missing. Run this only to pre-fill them on another
+-- database (e.g. live server).
+--
+-- Safe to run more than once: a row is inserted only if it does not exist.
+-- Change the prefix values below before running if needed.
+-- ============================================================
+
+-- GST Invoice  -> INV-26-27/0001
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'gst_code_prefix', 'INV-26-27/' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'gst_code_prefix');
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'gst_code_digits', '4' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'gst_code_digits');
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'gst_code_start', '1' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'gst_code_start');
+
+-- Non-GST Invoice  -> MS-0001
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'nongst_code_prefix', 'MS-' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'nongst_code_prefix');
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'nongst_code_digits', '4' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'nongst_code_digits');
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'nongst_code_start', '1' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'nongst_code_start');
+
+-- Quotation  -> Quo-001
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'quo_code_prefix', 'Quo-' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'quo_code_prefix');
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'quo_code_digits', '3' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'quo_code_digits');
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'quo_code_start', '1' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'quo_code_start');
+
+-- Check
+SELECT `meta_field`, `meta_value` FROM `system_info` WHERE `meta_field` LIKE '%\_code\_%';
