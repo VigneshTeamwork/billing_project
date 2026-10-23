@@ -42,6 +42,8 @@ if(isset($_GET['id'])){
                 <div class="row mb-0">
                     <div class="col-3 py-1 px-2 border border-navy bg-gradient-navy mb-0"><b>Purchase Code</b></div>
                     <div class="col-9 py-1 px-2 border mb-0"><?= isset($code) ? $code : '' ?></div>
+                    <div class="col-3 py-1 px-2 border border-navy bg-gradient-navy mb-0"><b>Purchase Date</b></div>
+                    <div class="col-9 py-1 px-2 border mb-0"><?= !empty($purchase_date) ? date("M d, Y", strtotime($purchase_date)) : '' ?></div>
                     <div class="col-3 py-1 px-2 border border-navy bg-gradient-navy mb-0"><b>Supplier Bill No</b></div>
                     <div class="col-9 py-1 px-2 border mb-0"><?= isset($supplier_bill_no) ? $supplier_bill_no : '' ?></div>
                     <div class="col-3 py-1 px-2 border border-navy bg-gradient-navy mb-0"><b>Bill Date</b></div>

@@ -58,7 +58,7 @@ function purchase_product_row($r = array()){
                         <input type="hidden" name="amount" value="<?= isset($amount) ? $amount : 0 ?>">
                         <input type="hidden" name="amount_with_gst" value="<?= isset($amount_with_gst) ? $amount_with_gst : 0 ?>">
                         <div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="col-lg-4 col-md-4 col-sm-12">
                                 <div class="form-group mb-3">
                                     <label for="invoice_type" class="control-label">Bill Type</label>
 									<select id="invoice_type" name="invoice_type" class="form-control form-control-sm rounded">
@@ -67,7 +67,13 @@ function purchase_product_row($r = array()){
 									</select>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="form-group mb-3">
+                                    <label for="purchase_date" class="control-label">Purchase Date</label>
+                                    <input type="date" name="purchase_date" id="purchase_date" class="form-control form-control-sm rounded-0" value="<?= isset($purchase_date) ? $purchase_date : '' ?>" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
                                 <div class="form-group mb-3">
                                     <label for="supplier_id" class="control-label">Select Supplier</label>
 									<select id="supplier_id" name="supplier_id" class="form-control form-control-sm rounded" required>
@@ -246,6 +252,8 @@ function purchase_product_row($r = array()){
 	}
 
     $(function(){
+		// New purchase: default to today's date on this computer (server clock is set to a different timezone).
+		if(!$('#purchase_date').val()) $('#purchase_date').val(new Date().toLocaleDateString('en-CA'))
 		$('select#invoice_type').select2({ width:'100%', containerCssClass:'form-control form-control-sm rounded-0' })
 		$('select#supplier_id').select2({ placeholder:"Select Supplier here", width:'100%', containerCssClass:'form-control form-control-sm rounded-0' })
         $('#product_sel').select2({ placeholder:"Select product here", width:'100%', containerCssClass:'form-control form-control-sm rounded-0' })

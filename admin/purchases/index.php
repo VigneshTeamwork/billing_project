@@ -24,7 +24,7 @@ $purchase_status = array(
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Date Updated</th>
+						<th>Purchase Date</th>
 						<th>Code</th>
 						<th>Supplier</th>
 						<th>Supplier Bill No</th>
@@ -39,13 +39,13 @@ $purchase_status = array(
 				<tbody>
 					<?php
 					$i = 1;
-					$qry = $conn->query("SELECT p.*, s.sup_name, (SELECT COALESCE(SUM(pp.amount),0) FROM `purchase_payment` pp where pp.purchase_id = p.id and pp.status = '0') as paid_amt FROM `purchase_list` p left join `supplier_list` s on p.supplier_id = s.id order by unix_timestamp(p.date_updated) desc ");
+					$qry = $conn->query("SELECT p.*, s.sup_name, (SELECT COALESCE(SUM(pp.amount),0) FROM `purchase_payment` pp where pp.purchase_id = p.id and pp.status = '0') as paid_amt FROM `purchase_list` p left join `supplier_list` s on p.supplier_id = s.id order by p.purchase_date desc, p.id desc ");
 					while($row = $qry->fetch_assoc()):
 						$bal_amt = $row['amount_with_gst'] - $row['paid_amt'];
 					?>
 						<tr>
 							<td class="text-center"><?php echo $i++; ?></td>
-							<td><p class="m-0 truncate-1"><?= date("M d, Y H:i", strtotime($row['date_updated'])) ?></p></td>
+							<td><p class="m-0 truncate-1"><?= date("M d, Y", strtotime($row['purchase_date'])) ?></p></td>
 							<td><p class="m-0 truncate-1"><?= $row['code'] ?></p></td>
 							<td><p class="m-0 truncate-1"><?= $row['sup_name'] ?></p></td>
 							<td><p class="m-0 truncate-1"><?= $row['supplier_bill_no'] ?></p></td>

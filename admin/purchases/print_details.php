@@ -82,7 +82,7 @@ if(isset($_GET['id'])){
 						GST No : <?= isset($supplier_gst_no) ? $supplier_gst_no : '' ?></p>
 					</th>
 					<th>
-						<p>Date : <?php echo date("d/m/Y", strtotime($date_created)); ?><br>
+						<p>Date : <?php echo date("d/m/Y", strtotime(!empty($purchase_date) ? $purchase_date : $date_created)); ?><br>
 						Purchase No : <?php echo $code; ?><br>
 						Supplier Bill No : <?= isset($supplier_bill_no) ? $supplier_bill_no : '' ?><br>
 						Bill Date : <?= !empty($bill_date) ? date("d/m/Y", strtotime($bill_date)) : '' ?><br>

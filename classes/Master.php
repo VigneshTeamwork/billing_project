@@ -802,6 +802,8 @@ Class Master extends DBConnection {
 			$_POST['user_id'] = $this->settings->userdata('id');
 			$_POST['code'] = next_doc_code($_POST['invoice_type'] == 'GST' ? 'pur_gst' : 'pur_nongst');
 		}
+		if(empty($_POST['purchase_date']))
+			$_POST['purchase_date'] = date('Y-m-d');
 		extract($_POST);
 		$data = "";
 		foreach($_POST as $k =>$v){

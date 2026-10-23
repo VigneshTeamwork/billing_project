@@ -141,3 +141,16 @@ INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'pur_nongst_code_s
 
 ALTER TABLE `transaction_list` ADD COLUMN IF NOT EXISTS `invoice_date` date DEFAULT NULL AFTER `code`;
 UPDATE `transaction_list` SET `invoice_date` = DATE(`date_created`) WHERE `invoice_date` IS NULL;
+
+
+-- ============================================================
+-- Purchase Date (user-entered date on purchase create / edit)
+-- Date: 2026-10-23
+-- ============================================================
+-- New column on `purchase_list`. Existing purchases get the date
+-- they were created. Bill Date (supplier's bill date) is unchanged.
+-- Run AFTER the Purchase Master section. Safe to run more than once.
+-- ============================================================
+
+ALTER TABLE `purchase_list` ADD COLUMN IF NOT EXISTS `purchase_date` date DEFAULT NULL AFTER `code`;
+UPDATE `purchase_list` SET `purchase_date` = DATE(`date_created`) WHERE `purchase_date` IS NULL;
