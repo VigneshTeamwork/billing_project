@@ -32,7 +32,7 @@
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Date Updated</th>
+						<th>Invoice Date</th>
 						<th>Code</th>
 						<th>Client</th>
 						<th>Bill Type</th>
@@ -47,15 +47,15 @@
 					<?php 
 					$i = 1;
 						if($_settings->userdata('type') == 3):
-						$qry = $conn->query("SELECT * FROM `transaction_list` where tech_id = '{$_settings->userdata('id')}' order by unix_timestamp(date_updated) desc ");
+						$qry = $conn->query("SELECT * FROM `transaction_list` where tech_id = '{$_settings->userdata('id')}' order by invoice_date desc, id desc ");
 						else:
-						$qry = $conn->query("SELECT * FROM `transaction_list` order by unix_timestamp(date_updated) desc ");
+						$qry = $conn->query("SELECT * FROM `transaction_list` order by invoice_date desc, id desc ");
 						endif;
 						while($row = $qry->fetch_assoc()):
 					?>
 						<tr>
 							<td class="text-center"><?php echo $i++; ?></td>
-							<td><p class="m-0 truncate-1"><?= date("M d, Y H:i", strtotime($row['date_updated'])) ?></p></td>
+							<td><p class="m-0 truncate-1"><?= date("M d, Y", strtotime($row['invoice_date'])) ?></p></td>
 							<td><p class="m-0 truncate-1"><?= $row['code'] ?></p></td>
 							<td><p class="m-0 truncate-1">
 							<?php

@@ -51,6 +51,8 @@ if(isset($_GET['id'])){
 					?>
                     <div class="col-3 py-1 px-2 border border-navy bg-gradient-navy mb-0"><b>Transaction Code</b></div>
                     <div class="col-9 py-1 px-2 border mb-0"><?= isset($code) ? $code : '' ?></div>
+                    <div class="col-3 py-1 px-2 border border-navy bg-gradient-navy mb-0"><b>Invoice Date</b></div>
+                    <div class="col-9 py-1 px-2 border mb-0"><?= !empty($invoice_date) ? date("M d, Y", strtotime($invoice_date)) : '' ?></div>
                     <div class="col-3 py-1 px-2 border border-navy bg-gradient-navy mb-0"><b>Client Name</b></div>
                     <div class="col-9 py-1 px-2 border mb-0"><?= isset($client_name) ? $client_name : '' ?></div>
                     <div class="col-3 py-1 px-2 border border-navy bg-gradient-navy mb-0"><b>Contact #</b></div>

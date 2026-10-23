@@ -169,21 +169,23 @@
 							}
 						}
 						
+						// Invoices use the user-entered invoice date; quotations still use their creation date.
+						$date_col = $view_condition == 'transactions' ? "invoice_date" : "DATE(date_created)";
 						if(isset($_POST['from_date'])){
 							if(!empty($_POST['from_date'])){
 								$from_date = date("Y-m-d", strtotime($_POST['from_date']));
-								$where_condition.= "DATE(date_created) >= '{$from_date}' and ";
-							}
-						}
-						
-						if(isset($_POST['to_date'])){
-							if(!empty($_POST['to_date'])){
-								$to_date = date("Y-m-d", strtotime($_POST['to_date']));
-								$where_condition.= "DATE(date_created) <= '{$to_date}' ";
+								$where_condition.= "{$date_col} >= '{$from_date}' and ";
 							}
 						}
 
-						$qry = $conn->query("SELECT * FROM {$table_condition} where {$where_condition} order by unix_timestamp(date_updated) desc");
+						if(isset($_POST['to_date'])){
+							if(!empty($_POST['to_date'])){
+								$to_date = date("Y-m-d", strtotime($_POST['to_date']));
+								$where_condition.= "{$date_col} <= '{$to_date}' ";
+							}
+						}
+
+						$qry = $conn->query("SELECT * FROM {$table_condition} where {$where_condition} order by ".($view_condition == 'transactions' ? "invoice_date desc, id desc" : "unix_timestamp(date_updated) desc"));
 						
 						/*if($_settings->userdata('type') == 3):
 						$qry = $conn->query("SELECT * FROM `transaction_list` where tech_id = '{$_settings->userdata('id')}' order by unix_timestamp(date_updated) desc ");
@@ -197,7 +199,7 @@
 						?>
 						<tr>
 							<td class="text-center"><?php echo $i++; ?></td>
-							<td><p class="m-0 truncate-1"><?= date("M d, Y H:i", strtotime($row['date_updated'])) ?></p></td>
+							<td><p class="m-0 truncate-1"><?= !empty($row['invoice_date']) ? date("M d, Y", strtotime($row['invoice_date'])) : date("M d, Y H:i", strtotime($row['date_updated'])) ?></p></td>
 							<td><p class="m-0 truncate-1"><?= $row['code'] ?></p></td>
 							<td><p class="m-0 truncate-1">
 							<?php

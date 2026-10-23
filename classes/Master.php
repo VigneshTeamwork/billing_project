@@ -342,6 +342,8 @@ Class Master extends DBConnection {
 			$_POST['user_id'] = $this->settings->userdata('id');
 			$_POST['code'] = next_doc_code($_POST['invoice_type'] == 'GST' ? 'gst' : 'nongst');
 		}
+		if(empty($_POST['invoice_date']))
+			$_POST['invoice_date'] = date('Y-m-d');
 		extract($_POST);
 		$data = "";
 		foreach($_POST as $k =>$v){
@@ -582,6 +584,8 @@ Class Master extends DBConnection {
 			$_POST['user_id'] = $this->settings->userdata('id');
 			$_POST['code'] = next_doc_code($_POST['invoice_type'] == 'GST' ? 'gst' : 'nongst');
 		}
+		if(empty($_POST['invoice_date']))
+			$_POST['invoice_date'] = date('Y-m-d');
 		extract($_POST);
 		$data = "";
 		foreach($_POST as $k =>$v){

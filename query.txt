@@ -128,3 +128,16 @@ INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'pur_gst_code_star
 INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'pur_nongst_code_prefix', 'PMS-' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'pur_nongst_code_prefix');
 INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'pur_nongst_code_digits', '4' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'pur_nongst_code_digits');
 INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'pur_nongst_code_start', '1' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'pur_nongst_code_start');
+
+
+-- ============================================================
+-- Invoice Date (user-entered date on invoice create / edit)
+-- Date: 2026-10-23
+-- ============================================================
+-- New column on `transaction_list`. Existing invoices get the date
+-- they were created, so their printed date does not change.
+-- Safe to run more than once.
+-- ============================================================
+
+ALTER TABLE `transaction_list` ADD COLUMN IF NOT EXISTS `invoice_date` date DEFAULT NULL AFTER `code`;
+UPDATE `transaction_list` SET `invoice_date` = DATE(`date_created`) WHERE `invoice_date` IS NULL;

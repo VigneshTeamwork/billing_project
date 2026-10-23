@@ -52,6 +52,10 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
         <div class="form-group mb-3">
             <label for="status" class="control-label">Aru You Sure to Want Quotation to Invoice Convert ?</label>
         </div>
+        <div class="form-group mb-3">
+            <label for="invoice_date" class="control-label">Invoice Date</label>
+            <input type="date" name="invoice_date" id="invoice_date" class="form-control form-control-sm rounded-0" required>
+        </div>
 		<div class="form-group mb-3">
             <?php if($_settings->userdata('type') == 3 && !isset($id)): ?>
                             
@@ -80,6 +84,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 </div>
 <script>
 	$(function(){
+		$('#invoice_date').val(new Date().toLocaleDateString('en-CA'))
 		$('select#tech_id').select2({
 			placeholder:"Select technician here",
 			width:'100%',

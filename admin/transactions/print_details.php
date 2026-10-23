@@ -119,7 +119,7 @@ if(isset($_GET['id'])){
 						GST No : <?php echo $client_gst_no; ?></p>
 					</th>
 					<th>
-						<p>Date : <?php echo date("d/m/Y", strtotime($date_created)); ?><br>
+						<p>Date : <?php echo date("d/m/Y", strtotime(!empty($invoice_date) ? $invoice_date : $date_created)); ?><br>
 						Invoice No : <?php echo $code; ?><br>
 						Assigned Technician : <?= isset($tech_name) ? $tech_name : '' ?><br>
 						Prepared By : <?= isset($user_name) ? $user_name : '' ?></p>
@@ -131,7 +131,7 @@ if(isset($_GET['id'])){
 					<td>
 						<h3><small>Subject: Invoice for requirement</small></h3>
 						<p>Dear <?php echo $client_name; ?>,<br>
-						Ref : Your enquiry for requirement dated : <?php echo date("d/m/Y", strtotime($date_created)); ?></p>
+						Ref : Your enquiry for requirement dated : <?php echo date("d/m/Y", strtotime(!empty($invoice_date) ? $invoice_date : $date_created)); ?></p>
 					</td>
 				</tr>
 			</table>-->
