@@ -285,7 +285,58 @@ Class Master extends DBConnection {
 		return json_encode($resp);
 
 	}
-	
+	function save_supplier(){
+		extract($_POST);
+		$data = "";
+		foreach($_POST as $k =>$v){
+			if(!in_array($k,array('id'))){
+				if(!empty($data)) $data .=",";
+				$v = $this->conn->real_escape_string($v);
+				$data .= " `{$k}`='{$v}' ";
+			}
+		}
+		$name = $this->conn->real_escape_string($sup_name);
+		$check = $this->conn->query("SELECT * FROM `supplier_list` where `sup_name` = '{$name}' and delete_flag = 0 ".(!empty($id) ? " and id != {$id} " : "")." ")->num_rows;
+		if($this->capture_err())
+			return $this->capture_err();
+		if($check > 0){
+			$resp['status'] = 'failed';
+			$resp['msg'] = "Supplier Name already exists.";
+			return json_encode($resp);
+		}
+		if(empty($id)){
+			$sql = "INSERT INTO `supplier_list` set {$data} ";
+		}else{
+			$sql = "UPDATE `supplier_list` set {$data} where id = '{$id}' ";
+		}
+		$save = $this->conn->query($sql);
+		if($save){
+			$resp['status'] = 'success';
+			if(empty($id))
+				$resp['msg'] = "New Supplier successfully saved.";
+			else
+				$resp['msg'] = " Supplier successfully updated.";
+		}else{
+			$resp['status'] = 'failed';
+			$resp['err'] = $this->conn->error."[{$sql}]";
+		}
+		if($resp['status'] == 'success')
+			$this->settings->set_flashdata('success',$resp['msg']);
+		return json_encode($resp);
+	}
+	function delete_supplier(){
+		extract($_POST);
+		$del = $this->conn->query("UPDATE `supplier_list` set `delete_flag` = 1 where id = '{$id}'");
+		if($del){
+			$resp['status'] = 'success';
+			$this->settings->set_flashdata('success'," Supplier successfully deleted.");
+		}else{
+			$resp['status'] = 'failed';
+			$resp['error'] = $this->conn->error;
+		}
+		return json_encode($resp);
+	}
+
 	function save_transaction(){
 		if(empty($_POST['id'])){
 			$_POST['user_id'] = $this->settings->userdata('id');
@@ -847,6 +898,12 @@ switch ($action) {
 	break;
 	case 'delete_customer':
 		echo $Master->delete_customer();
+	break;
+	case 'save_supplier':
+		echo $Master->save_supplier();
+	break;
+	case 'delete_supplier':
+		echo $Master->delete_supplier();
 	break;
 	case 'save_transaction':
 		echo $Master->save_transaction();

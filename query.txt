@@ -31,3 +31,26 @@ INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'quo_code_start', 
 
 -- Check
 SELECT `meta_field`, `meta_value` FROM `system_info` WHERE `meta_field` LIKE '%\_code\_%';
+
+
+-- ============================================================
+-- Supplier Master
+-- Date: 2026-10-23
+-- ============================================================
+-- New table, same structure as `customer_list` (sup_ instead of cus_).
+-- Safe to run more than once (IF NOT EXISTS).
+-- ============================================================
+
+CREATE TABLE IF NOT EXISTS `supplier_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sup_name` varchar(200) DEFAULT NULL,
+  `sup_address` text DEFAULT NULL,
+  `sup_mob_no` varchar(200) DEFAULT NULL,
+  `sup_email_id` varchar(200) DEFAULT NULL,
+  `sup_gst_no` varchar(200) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT 1,
+  `delete_flag` tinyint(1) DEFAULT 0,
+  `date_created` datetime NOT NULL DEFAULT current_timestamp(),
+  `date_updated` datetime NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
