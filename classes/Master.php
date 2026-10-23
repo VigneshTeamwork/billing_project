@@ -289,30 +289,7 @@ Class Master extends DBConnection {
 	function save_transaction(){
 		if(empty($_POST['id'])){
 			$_POST['user_id'] = $this->settings->userdata('id');
-			/*$prefix = date("Ymd");
-			$code = sprintf("%'.04d", 1);
-			while(true){
-				$check = $this->conn->query("SELECT * FROM `transaction_list` where code = '{$prefix}{$code}' ")->num_rows;
-				if($check > 0){
-					$code = sprintf("%'.04d", abs($code) + 1);
-				}else{
-					$_POST['code'] = $prefix.$code;
-					break;
-				}
-			}*/
-			if($_POST['invoice_type'] == "GST"){
-				$prefix = "INV-26-27/00";
-				$code = 1;
-				$check = $this->conn->query("SELECT * FROM `transaction_list` where invoice_type = 'GST'")->num_rows;
-			}else{
-				$prefix = "MS-00";
-				$code = 1;
-				$check = $this->conn->query("SELECT * FROM `transaction_list` where invoice_type = 'Non-GST'")->num_rows;
-			}
-			if($check > 0){
-				$code = $code + $check;
-			}
-			$_POST['code'] = $prefix.$code;
+			$_POST['code'] = next_doc_code($_POST['invoice_type'] == 'GST' ? 'gst' : 'nongst');
 		}
 		extract($_POST);
 		$data = "";
@@ -439,29 +416,7 @@ Class Master extends DBConnection {
 	function save_quotation(){
 		if(empty($_POST['id'])){
 			$_POST['user_id'] = $this->settings->userdata('id');
-			/*$prefix = date("Ymd");
-			$code = sprintf("%'.04d", 1);
-			while(true){
-				$check = $this->conn->query("SELECT * FROM `quotation_list` where code = '{$prefix}{$code}' ")->num_rows;
-				if($check > 0){
-					$code = sprintf("%'.04d", abs($code) + 1);
-				}else{
-					$_POST['code'] = $prefix.$code;
-					break;
-				}
-			}*/
-			$prefix = "Quo-00";
-			$code = 1;
-			$check = $this->conn->query("SELECT * FROM `quotation_list`")->num_rows;
-			if($check > 0){
-				$code = $check + 1;
-			}
-			/*$check = "SELECT AUTO_INCREMENT FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'quotation_list' AND TABLE_SCHEMA = 'softtechit_crsms_db'";
-			$result = $this->conn->query($check);
-			$row = $result->fetch_assoc();
-			$code = $row['AUTO_INCREMENT'];*/
-
-			$_POST['code'] = $prefix.$code;
+			$_POST['code'] = next_doc_code('quotation');
 		}
 		extract($_POST);
 		$data = "";
@@ -574,32 +529,7 @@ Class Master extends DBConnection {
 	function convert_to_invoice(){
 		if(empty($_POST['id'])){
 			$_POST['user_id'] = $this->settings->userdata('id');
-			/*$prefix = date("Ymd");
-			$code = sprintf("%'.04d", 1);
-			while(true){
-				$check = $this->conn->query("SELECT * FROM `transaction_list` where code = '{$prefix}{$code}' ")->num_rows;
-				if($check > 0){
-					$code = sprintf("%'.04d", abs($code) + 1);
-				}else{
-					$_POST['code'] = $prefix.$code;
-					break;
-				}
-			}*/
-			if($_POST['invoice_type'] == "GST"){
-				$prefix = "IN";
-				$code = 1707;
-				$check = $this->conn->query("SELECT * FROM `transaction_list` where invoice_type = 'GST'")->num_rows;
-			}else{
-				$prefix = "SOFT-00";
-				$code = 1;
-				$check = $this->conn->query("SELECT * FROM `transaction_list` where invoice_type = 'Non-GST'")->num_rows;
-			}
-			if($check > 0){
-				$code = $code + $check;
-			}
-			/*$check_result = $check->fetch_assoc();
-			$code = $check_result['cur_tran_id'];*/
-			$_POST['code'] = $prefix.$code;
+			$_POST['code'] = next_doc_code($_POST['invoice_type'] == 'GST' ? 'gst' : 'nongst');
 		}
 		extract($_POST);
 		$data = "";

@@ -54,6 +54,33 @@
 					<label for="gst_no" class="control-label">System GST No</label>
 					<input type="text" class="form-control form-control-sm" name="gst_no" id="gst_no" value="<?php echo  $_settings->info('gst_no') ?>">
 				</div>
+				<fieldset class="border px-3 pt-2 mb-3">
+					<legend class="w-auto px-2 h6 mb-0">Document Numbering</legend>
+					<small class="text-muted d-block mb-2">The running number continues per type when you change the prefix (e.g. a new financial year). Raise the starting number to jump ahead.</small>
+					<?php foreach(array('gst' => 'GST Invoice', 'nongst' => 'Non-GST Invoice', 'quotation' => 'Quotation') as $kind => $label):
+						$s = doc_code_settings($kind);
+						$k = $s['key'];
+					?>
+					<div class="form-row align-items-end doc-code-row" data-last="<?= doc_code_last_no($kind) ?>">
+						<div class="form-group col-md-3">
+							<label for="<?= $k ?>_prefix" class="control-label"><?= $label ?> Prefix</label>
+							<input type="text" class="form-control form-control-sm code-prefix" name="<?= $k ?>_prefix" id="<?= $k ?>_prefix" value="<?= htmlspecialchars($s['prefix']) ?>">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="<?= $k ?>_digits" class="control-label">Digits</label>
+							<input type="number" min="1" max="10" class="form-control form-control-sm code-digits" name="<?= $k ?>_digits" id="<?= $k ?>_digits" value="<?= $s['digits'] ?>">
+						</div>
+						<div class="form-group col-md-3">
+							<label for="<?= $k ?>_start" class="control-label">Starting Number</label>
+							<input type="number" min="1" class="form-control form-control-sm code-start" name="<?= $k ?>_start" id="<?= $k ?>_start" value="<?= $s['start'] ?>">
+						</div>
+						<div class="form-group col-md-4">
+							<label class="control-label">Next Code</label>
+							<input type="text" class="form-control form-control-sm code-preview" readonly value="<?= htmlspecialchars(next_doc_code($kind)) ?>">
+						</div>
+					</div>
+					<?php endforeach; ?>
+				</fieldset>
 			<div class="form-group">
 				<label for="" class="control-label">Footer Content</label>
 	             <textarea name="content[footer]" id="" cols="30" rows="2" class="form-control summernote"><?php echo  is_file(base_app.'footer.html') ? file_get_contents(base_app.'footer.html') : "" ?></textarea>
@@ -183,6 +210,14 @@
         })
     }
 	$(document).ready(function(){
+		$('.doc-code-row').on('input change', 'input', function(){
+			var row = $(this).closest('.doc-code-row');
+			var digits = Math.max(1, parseInt(row.find('.code-digits').val()) || 1);
+			var start = Math.max(1, parseInt(row.find('.code-start').val()) || 1);
+			var next = String(Math.max(parseInt(row.data('last')) + 1, start));
+			while(next.length < digits) next = '0' + next;
+			row.find('.code-preview').val(row.find('.code-prefix').val() + next);
+		})
 		$('.rem_img').click(function(){
             _conf("Are sure to delete this image permanently?",'delete_img',["'"+$(this).attr('data-path')+"'"])
         })

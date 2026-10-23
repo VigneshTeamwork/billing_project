@@ -41,6 +41,54 @@ function format_num($number = '' , $decimal = ''){
         return "Invalid Input";
     }
 }
+// Next document code for 'gst', 'nongst' or 'quotation', based on the Settings > Document Numbering options.
+// The running number continues per type even when the prefix changes; the starting number can force a jump.
+function doc_code_settings($kind){
+	global $_settings;
+	$defaults = array(
+		'gst'       => array('gst_code',    'INV-26-27/', 4),
+		'nongst'    => array('nongst_code', 'MS-',        4),
+		'quotation' => array('quo_code',    'Quo-',       3),
+	);
+	list($key, $def_prefix, $def_digits) = $defaults[$kind];
+	$prefix = $_settings->info($key.'_prefix');
+	return array(
+		'key'    => $key,
+		'prefix' => $prefix !== false ? html_entity_decode($prefix, ENT_QUOTES | ENT_HTML5) : $def_prefix,
+		'digits' => max(1, (int)($_settings->info($key.'_digits') ?: $def_digits)),
+		'start'  => max(1, (int)($_settings->info($key.'_start') ?: 1)),
+	);
+}
+// Highest running number already used for this type, whatever prefix it was issued with.
+function doc_code_last_no($kind){
+	global $conn;
+	if($kind == 'quotation')
+		$sql = "SELECT code FROM `quotation_list`";
+	else
+		$sql = "SELECT code FROM `transaction_list` where invoice_type = '".($kind == 'gst' ? 'GST' : 'Non-GST')."'";
+	$highest = 0;
+	$qry = $conn->query($sql);
+	while($row = $qry->fetch_assoc()){
+		if(preg_match('/(\d+)$/', $row['code'], $m))
+			$highest = max($highest, (int)$m[1]);
+	}
+	return $highest;
+}
+function next_doc_code($kind){
+	global $conn;
+	$s = doc_code_settings($kind);
+	$prefix = $s['prefix'];
+	$digits = $s['digits'];
+	$table = $kind == 'quotation' ? 'quotation_list' : 'transaction_list';
+	$next = max(doc_code_last_no($kind) + 1, $s['start']);
+	while(true){
+		$code = $prefix.str_pad($next, $digits, '0', STR_PAD_LEFT);
+		$esc = $conn->real_escape_string($code);
+		if($conn->query("SELECT id FROM `{$table}` where code = '{$esc}'")->num_rows == 0)
+			return $code;
+		$next++;
+	}
+}
 function isMobileDevice(){
     $aMobileUA = array(
         '/iphone/i' => 'iPhone', 
