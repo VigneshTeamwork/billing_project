@@ -54,3 +54,77 @@ CREATE TABLE IF NOT EXISTS `supplier_list` (
   `date_updated` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+-- ============================================================
+-- Purchase Master
+-- Date: 2026-10-23
+-- ============================================================
+-- 3 new tables (same pattern as transaction_list / transaction_products / payment)
+-- + 6 settings rows for Purchase GST / Non-GST code numbering.
+-- Run AFTER the Supplier Master section. Safe to run more than once.
+-- ============================================================
+
+CREATE TABLE IF NOT EXISTS `purchase_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `code` varchar(100) NOT NULL,
+  `invoice_type` varchar(200) DEFAULT NULL,
+  `supplier_id` int(11) DEFAULT NULL,
+  `supplier_bill_no` varchar(100) DEFAULT NULL,
+  `bill_date` date DEFAULT NULL,
+  `sub_amount` float(15,2) DEFAULT 0.00,
+  `dis_amt` float(15,2) DEFAULT 0.00,
+  `cgst` float(15,2) DEFAULT 0.00,
+  `sgst` float(15,2) DEFAULT 0.00,
+  `cgst_amt` float(15,2) DEFAULT 0.00,
+  `sgst_amt` float(15,2) DEFAULT 0.00,
+  `amount_with_gst` float(15,2) DEFAULT 0.00,
+  `amount` float(15,2) NOT NULL DEFAULT 0.00,
+  `status` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0=Pending,1=Received,2=Paid,3=Cancelled',
+  `date_created` datetime NOT NULL DEFAULT current_timestamp(),
+  `date_updated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `supplier_id` (`supplier_id`),
+  CONSTRAINT `user_id_fk_pl` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `purchase_products` (
+  `purchase_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `qty` int(11) NOT NULL DEFAULT 0,
+  `price` float(15,2) NOT NULL DEFAULT 0.00,
+  `product_dis_type` varchar(200) DEFAULT NULL,
+  `product_discount` varchar(200) DEFAULT NULL,
+  `product_discount_amt` float(15,2) DEFAULT 0.00,
+  `product_total` float(15,2) DEFAULT 0.00,
+  KEY `purchase_id` (`purchase_id`),
+  KEY `product_id` (`product_id`),
+  CONSTRAINT `product_id_fk_pp` FOREIGN KEY (`product_id`) REFERENCES `product_list` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `purchase_id_fk_pp` FOREIGN KEY (`purchase_id`) REFERENCES `purchase_list` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `purchase_payment` (
+  `payment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `purchase_id` int(11) NOT NULL,
+  `payment_date` date NOT NULL,
+  `amount` float(15,2) NOT NULL DEFAULT 0.00,
+  `payment_type` varchar(200) NOT NULL,
+  `payment_desc` longtext NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `status` char(15) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`payment_id`),
+  KEY `purchase_id` (`purchase_id`),
+  CONSTRAINT `purchase_id_fk_ppay` FOREIGN KEY (`purchase_id`) REFERENCES `purchase_list` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Purchase GST  -> PUR-26-27/0001
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'pur_gst_code_prefix', 'PUR-26-27/' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'pur_gst_code_prefix');
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'pur_gst_code_digits', '4' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'pur_gst_code_digits');
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'pur_gst_code_start', '1' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'pur_gst_code_start');
+
+-- Purchase Non-GST  -> PMS-0001
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'pur_nongst_code_prefix', 'PMS-' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'pur_nongst_code_prefix');
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'pur_nongst_code_digits', '4' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'pur_nongst_code_digits');
+INSERT INTO `system_info` (`meta_field`, `meta_value`) SELECT 'pur_nongst_code_start', '1' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM `system_info` WHERE `meta_field` = 'pur_nongst_code_start');

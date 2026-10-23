@@ -49,6 +49,8 @@ function doc_code_settings($kind){
 		'gst'       => array('gst_code',    'INV-26-27/', 4),
 		'nongst'    => array('nongst_code', 'MS-',        4),
 		'quotation' => array('quo_code',    'Quo-',       3),
+		'pur_gst'    => array('pur_gst_code',    'PUR-26-27/', 4),
+		'pur_nongst' => array('pur_nongst_code', 'PMS-',       4),
 	);
 	list($key, $def_prefix, $def_digits) = $defaults[$kind];
 	$prefix = $_settings->info($key.'_prefix');
@@ -59,13 +61,18 @@ function doc_code_settings($kind){
 		'start'  => max(1, (int)($_settings->info($key.'_start') ?: 1)),
 	);
 }
+function doc_code_table($kind){
+	if($kind == 'quotation') return 'quotation_list';
+	if(in_array($kind, array('pur_gst','pur_nongst'))) return 'purchase_list';
+	return 'transaction_list';
+}
 // Highest running number already used for this type, whatever prefix it was issued with.
 function doc_code_last_no($kind){
 	global $conn;
 	if($kind == 'quotation')
 		$sql = "SELECT code FROM `quotation_list`";
 	else
-		$sql = "SELECT code FROM `transaction_list` where invoice_type = '".($kind == 'gst' ? 'GST' : 'Non-GST')."'";
+		$sql = "SELECT code FROM `".doc_code_table($kind)."` where invoice_type = '".(in_array($kind, array('gst','pur_gst')) ? 'GST' : 'Non-GST')."'";
 	$highest = 0;
 	$qry = $conn->query($sql);
 	while($row = $qry->fetch_assoc()){
@@ -79,7 +86,7 @@ function next_doc_code($kind){
 	$s = doc_code_settings($kind);
 	$prefix = $s['prefix'];
 	$digits = $s['digits'];
-	$table = $kind == 'quotation' ? 'quotation_list' : 'transaction_list';
+	$table = doc_code_table($kind);
 	$next = max(doc_code_last_no($kind) + 1, $s['start']);
 	while(true){
 		$code = $prefix.str_pad($next, $digits, '0', STR_PAD_LEFT);

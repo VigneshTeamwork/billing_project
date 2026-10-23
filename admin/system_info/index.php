@@ -57,7 +57,7 @@
 				<fieldset class="border px-3 pt-2 mb-3">
 					<legend class="w-auto px-2 h6 mb-0">Document Numbering</legend>
 					<small class="text-muted d-block mb-2">The running number continues per type when you change the prefix (e.g. a new financial year). Raise the starting number to jump ahead.</small>
-					<?php foreach(array('gst' => 'GST Invoice', 'nongst' => 'Non-GST Invoice', 'quotation' => 'Quotation') as $kind => $label):
+					<?php foreach(array('gst' => 'GST Invoice', 'nongst' => 'Non-GST Invoice', 'quotation' => 'Quotation', 'pur_gst' => 'Purchase GST', 'pur_nongst' => 'Purchase Non-GST') as $kind => $label):
 						$s = doc_code_settings($kind);
 						$k = $s['key'];
 					?>

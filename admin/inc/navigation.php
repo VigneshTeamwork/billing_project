@@ -88,6 +88,14 @@
                       </a>
                     </li>
 					<li class="nav-item dropdown">
+                      <a href="<?php echo base_url ?>admin/?page=purchases" class="nav-link nav-purchases">
+                        <i class="nav-icon fas fa-shopping-cart"></i>
+                        <p>
+                          Purchase List
+                        </p>
+                      </a>
+                    </li>
+					<li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=report" class="nav-link nav-report">
                         <i class="nav-icon fas fa-chart-bar"></i>
                         <p>

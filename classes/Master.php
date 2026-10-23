@@ -792,6 +792,131 @@ Class Master extends DBConnection {
 		return json_encode($resp);
 
 	}
+
+	function save_purchase(){
+		if(empty($_POST['id'])){
+			$_POST['user_id'] = $this->settings->userdata('id');
+			$_POST['code'] = next_doc_code($_POST['invoice_type'] == 'GST' ? 'pur_gst' : 'pur_nongst');
+		}
+		extract($_POST);
+		$data = "";
+		foreach($_POST as $k =>$v){
+			if(!in_array($k,array('id')) && !is_array($_POST[$k])){
+				if(!empty($data)) $data .=",";
+				if($k == 'bill_date' && $v == ''){
+					$data .= " `{$k}`=NULL ";
+					continue;
+				}
+				$v = $this->conn->real_escape_string($v);
+				$data .= " `{$k}`='{$v}' ";
+			}
+		}
+		if(empty($id)){
+			$sql = "INSERT INTO `purchase_list` set {$data} ";
+		}else{
+			$sql = "UPDATE `purchase_list` set {$data} where id = '{$id}' ";
+		}
+		$save = $this->conn->query($sql);
+		if($save){
+			$pid = !empty($id) ? $id : $this->conn->insert_id;
+			$resp['pid'] = $pid;
+			$resp['status'] = 'success';
+			if(empty($id))
+				$resp['msg'] = "New Purchase successfully saved.";
+			else
+				$resp['msg'] = " Purchase successfully updated.";
+
+			$this->conn->query("DELETE FROM `purchase_products` where purchase_id = '{$pid}'");
+			if(isset($product_id)){
+				$data = "";
+				foreach($product_id as $k =>$v){
+					$prod = $this->conn->real_escape_string($v);
+					$price = $this->conn->real_escape_string($product_price[$k]);
+					$qty = $this->conn->real_escape_string($product_qty[$k]);
+					$dis_type = $this->conn->real_escape_string($product_dis_type[$k]);
+					$discount = $this->conn->real_escape_string($product_discount[$k]);
+					$discount_amt = $this->conn->real_escape_string($product_discount_amt[$k]);
+					$total = $this->conn->real_escape_string($product_total[$k]);
+					if(!empty($data)) $data .= ", ";
+					$data .= "('{$pid}', '{$prod}', '{$qty}', '{$price}', '{$dis_type}', '{$discount}', '{$discount_amt}', '{$total}')";
+				}
+				if(!empty($data)){
+					$sql_product = "INSERT INTO `purchase_products` (`purchase_id`, `product_id`,`qty`, `price`, `product_dis_type`, `product_discount`, `product_discount_amt`, `product_total`) VALUES {$data}";
+					$save_products = $this->conn->query($sql_product);
+					if(!$save_products){
+						$resp['status'] = 'failed';
+						$resp['sql'] = $sql_product;
+						$resp['error'] = $this->conn->error;
+						$resp['msg'] = empty($id) ? "Purchase has failed save." : "Purchase has failed update.";
+						return json_encode($resp);
+					}
+				}
+			}
+		}else{
+			$resp['status'] = 'failed';
+			$resp['err'] = $this->conn->error."[{$sql}]";
+		}
+		if($resp['status'] == 'success')
+			$this->settings->set_flashdata('success',$resp['msg']);
+		return json_encode($resp);
+	}
+	function delete_purchase(){
+		extract($_POST);
+		// purchase_products and purchase_payment rows go with it (ON DELETE CASCADE)
+		$del = $this->conn->query("DELETE FROM `purchase_list` where id = '{$id}'");
+		if($del){
+			$resp['status'] = 'success';
+			$this->settings->set_flashdata('success'," Purchase successfully deleted.");
+		}else{
+			$resp['status'] = 'failed';
+			$resp['error'] = $this->conn->error;
+		}
+		return json_encode($resp);
+	}
+	function update_purchase_status(){
+		extract($_POST);
+		$update = $this->conn->query("UPDATE `purchase_list` set `status` = '{$status}' where id = '{$id}'");
+		if($update){
+			$resp['status'] = 'success';
+			$this->settings->set_flashdata('success', 'Purchase\'s Status has been updated successfully.');
+		}else{
+			$resp['status'] = 'failed';
+			$resp['msg'] = "Purchase's status has failed to update.";
+		}
+		return json_encode($resp);
+	}
+	function save_purchase_payment(){
+		$data = "";
+		foreach($_POST as $k =>$v){
+			if(!in_array($k,array('id'))){
+				if(!empty($data)) $data .=",";
+				$v = $this->conn->real_escape_string($v);
+				$data .= " `{$k}`='{$v}'";
+			}
+		}
+		$sql = "INSERT INTO `purchase_payment` set {$data} ";
+		if($this->conn->query($sql)){
+			$resp['status'] = 'success';
+			$resp['msg'] = "Payment successfully saved.";
+			$this->settings->set_flashdata('success',$resp['msg']);
+		}else{
+			$resp['status'] = 'failed';
+			$resp['err'] = $this->conn->error."[{$sql}]";
+		}
+		return json_encode($resp);
+	}
+	function delete_purchase_payment(){
+		extract($_POST);
+		$del = $this->conn->query("UPDATE `purchase_payment` set `status` = 1 where payment_id = '{$id}'");
+		if($del){
+			$resp['status'] = 'success';
+			$this->settings->set_flashdata('success'," Payment successfully deleted.");
+		}else{
+			$resp['status'] = 'failed';
+			$resp['error'] = $this->conn->error;
+		}
+		return json_encode($resp);
+	}
 	
 	function update_quo_status(){
 		extract($_POST);
@@ -904,6 +1029,21 @@ switch ($action) {
 	break;
 	case 'delete_supplier':
 		echo $Master->delete_supplier();
+	break;
+	case 'save_purchase':
+		echo $Master->save_purchase();
+	break;
+	case 'delete_purchase':
+		echo $Master->delete_purchase();
+	break;
+	case 'update_purchase_status':
+		echo $Master->update_purchase_status();
+	break;
+	case 'save_purchase_payment':
+		echo $Master->save_purchase_payment();
+	break;
+	case 'delete_purchase_payment':
+		echo $Master->delete_purchase_payment();
 	break;
 	case 'save_transaction':
 		echo $Master->save_transaction();
