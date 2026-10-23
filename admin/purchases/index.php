@@ -54,7 +54,7 @@ $purchase_status = array(
 							<td class='text-right'><?= format_num($row['paid_amt']) ?></td>
 							<td class='text-right'><?= format_num($bal_amt) ?></td>
 							<td class="text-center"><?= isset($purchase_status[$row['status']]) ? $purchase_status[$row['status']] : '' ?></td>
-							<td align="center">
+							<td align="center" class="text-nowrap">
 								<a class="btn btn-default bg-gradient-light btn-flat btn-sm" href="?page=purchases/view_details&id=<?php echo $row['id'] ?>"><span class="fa fa-eye text-dark"></span> View</a>
 								<a class="btn btn-default bg-gradient-light btn-flat btn-sm payment" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-money-bill text-dark"></span> Payment</a>
 							</td>

@@ -201,27 +201,27 @@ if(isset($_GET['id'])){
                 <h5 class="text-navy text-right">Grand Total: <b id="amount_with_gst"><?= isset($amount_with_gst) ? format_num($amount_with_gst) : "0.00" ?></b></h5>
             </div>
             <hr>
-            <div class="row justify-content-center">
-                <button class="btn btn-primary bg-gradient-orange border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="update_status" type="button">Update Status</button>
+            <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center">
+                <button class="btn btn-primary bg-gradient-orange border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="update_status" type="button">Update Status</button>
 				<?php
 				if($inv_status == 1){
 					?>
-					<a href="./?page=transactions/view_details&id=<?= isset($invoice_id) ? $invoice_id : '' ?>" class="btn btn-primary bg-gradient-navy border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" >View Invoice Details</a>
+					<a href="./?page=transactions/view_details&id=<?= isset($invoice_id) ? $invoice_id : '' ?>" class="btn btn-primary bg-gradient-navy border flex-fill text-nowrap mx-1 mb-2 rounded-pill" >View Invoice Details</a>
 					<?php
 				}else{
 					?>
-					<button class="btn btn-primary bg-gradient-navy border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="convert_to_invoice" type="button">Convert to Invoice</button>
+					<button class="btn btn-primary bg-gradient-navy border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="convert_to_invoice" type="button">Convert to Invoice</button>
 					<?php
 				}
 				?>
 				
-                <a class="btn btn-primary bg-gradient-primary border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" href="./?page=quotations/manage_quotation&id=<?= isset($id) ? $id : '' ?>"><i class="fa fa-edit"></i> Edit</a>
-                <!--<button class="btn btn-light bg-gradient-light border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="print"><i class="fa fa-print"></i> Print</button>-->
-				<a href="./?page=quotations/print_details&id=<?= isset($id) ? $id : '' ?>" class="btn btn-light bg-gradient-light border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" target="_blank"><i class="fa fa-print"></i> Print</a>
+                <a class="btn btn-primary bg-gradient-primary border flex-fill text-nowrap mx-1 mb-2 rounded-pill" href="./?page=quotations/manage_quotation&id=<?= isset($id) ? $id : '' ?>"><i class="fa fa-edit"></i> Edit</a>
+                <!--<button class="btn btn-light bg-gradient-light border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="print"><i class="fa fa-print"></i> Print</button>-->
+				<a href="./?page=quotations/print_details&id=<?= isset($id) ? $id : '' ?>" class="btn btn-light bg-gradient-light border flex-fill text-nowrap mx-1 mb-2 rounded-pill" target="_blank"><i class="fa fa-print"></i> Print</a>
                 <?php if($_settings->userdata('type') == 1) { ?>
-					<button class="btn btn-danger bg-gradient-danger border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="delete_quotation" type="button"><i class="fa fa-trash"></i> Delete Quotation</button>
+					<button class="btn btn-danger bg-gradient-danger border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="delete_quotation" type="button"><i class="fa fa-trash"></i> Delete Quotation</button>
 				<?php }?>
-				<button class="btn btn-primary bg-gradient-navy border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="share" onclick="sendWhatsapp(<?php echo $contact; ?>,'<?php echo base_url ?>admin?page=quotations/print_details&id=<?php echo $_GET['id'] ?>')" type="button">Share</button>
+				<button class="btn btn-primary bg-gradient-navy border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="share" onclick="sendWhatsapp(<?php echo $contact; ?>,'<?php echo base_url ?>admin?page=quotations/print_details&id=<?php echo $_GET['id'] ?>')" type="button">Share</button>
 				
             </div>
         </div>

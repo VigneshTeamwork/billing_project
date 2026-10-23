@@ -212,7 +212,7 @@ $is_purchase = isset($_POST['report_submit']) && isset($_POST['report_type']) &&
 							<td class='text-right'><?= format_num($bal_amt) ?></td>
 							<td><p class="m-0 truncate-1"><?= $is_purchase ? $row['supplier_bill_no'] : (isset($techs[$row['tech_id']]) ? $techs[$row['tech_id']] : '') ?></p></td>
 							<td class="text-center"><?= isset($status_labels[$row['status']]) ? $status_labels[$row['status']] : '' ?></td>
-							<td align="center">
+							<td align="center" class="text-nowrap">
 								<a class="btn btn-default bg-gradient-light btn-flat btn-sm" href="?page=<?php echo $view_condition; ?>/view_details&id=<?php echo $row['id'] ?>"><span class="fa fa-eye text-dark"></span> View</a>
 								<a class="btn btn-default bg-gradient-light btn-flat btn-sm payment" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>" data-module="<?php echo $view_condition; ?>"><span class="fa fa-money-bill text-dark"></span> Payment</a>
 							</td>

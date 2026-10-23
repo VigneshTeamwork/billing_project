@@ -203,15 +203,15 @@ if(isset($_GET['id'])){
                 <h5 class="text-navy text-right">Grand Total: <b id="amount_with_gst"><?= isset($amount_with_gst) ? format_num($amount_with_gst) : "0.00" ?></b></h5>
             </div>
             <hr>
-            <div class="row justify-content-center">
-                <button class="btn btn-primary bg-gradient-navy border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="update_status" type="button">Update Status</button>
-                <a class="btn btn-primary bg-gradient-primary border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" href="./?page=transactions/manage_transaction&id=<?= isset($id) ? $id : '' ?>"><i class="fa fa-edit"></i> Edit</a>
-                <!--<button class="btn btn-light bg-gradient-light border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="print"><i class="fa fa-print"></i> Print</button>-->
-				<a href="./?page=transactions/print_details&id=<?= isset($id) ? $id : '' ?>" class="btn btn-light bg-gradient-light border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" target="_blank"><i class="fa fa-print"></i> Print</a>
+            <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center">
+                <button class="btn btn-primary bg-gradient-navy border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="update_status" type="button">Update Status</button>
+                <a class="btn btn-primary bg-gradient-primary border flex-fill text-nowrap mx-1 mb-2 rounded-pill" href="./?page=transactions/manage_transaction&id=<?= isset($id) ? $id : '' ?>"><i class="fa fa-edit"></i> Edit</a>
+                <!--<button class="btn btn-light bg-gradient-light border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="print"><i class="fa fa-print"></i> Print</button>-->
+				<a href="./?page=transactions/print_details&id=<?= isset($id) ? $id : '' ?>" class="btn btn-light bg-gradient-light border flex-fill text-nowrap mx-1 mb-2 rounded-pill" target="_blank"><i class="fa fa-print"></i> Print</a>
                 <?php if($_settings->userdata('type') == 1) { ?>
-					<button class="btn btn-danger bg-gradient-danger border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="delete_transaction" type="button"><i class="fa fa-trash"></i> Delete Transaction</button>
+					<button class="btn btn-danger bg-gradient-danger border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="delete_transaction" type="button"><i class="fa fa-trash"></i> Delete Transaction</button>
 				<?php }?>
-				<button class="btn btn-primary bg-gradient-navy border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="share" onclick="sendWhatsapp(<?php echo $contact; ?>,'<?php echo base_url ?>admin?page=transactions/print_details&id=<?php echo $_GET['id'] ?>')" type="button">Share</button>
+				<button class="btn btn-primary bg-gradient-navy border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="share" onclick="sendWhatsapp(<?php echo $contact; ?>,'<?php echo base_url ?>admin?page=transactions/print_details&id=<?php echo $_GET['id'] ?>')" type="button">Share</button>
             </div>
         </div>
     </div>

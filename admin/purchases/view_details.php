@@ -131,14 +131,14 @@ if(isset($_GET['id'])){
                 <h5 class="text-navy text-right">Grand Total: <b><?= isset($amount_with_gst) ? format_num($amount_with_gst, 2) : "0.00" ?></b></h5>
             </div>
             <hr>
-            <div class="row justify-content-center">
-                <button class="btn btn-primary bg-gradient-navy border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="update_status" type="button">Update Status</button>
-                <a class="btn btn-primary bg-gradient-primary border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" href="./?page=purchases/manage_purchase&id=<?= isset($id) ? $id : '' ?>"><i class="fa fa-edit"></i> Edit</a>
-				<a href="./?page=purchases/print_details&id=<?= isset($id) ? $id : '' ?>" class="btn btn-light bg-gradient-light border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" target="_blank"><i class="fa fa-print"></i> Print</a>
+            <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center">
+                <button class="btn btn-primary bg-gradient-navy border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="update_status" type="button">Update Status</button>
+                <a class="btn btn-primary bg-gradient-primary border flex-fill text-nowrap mx-1 mb-2 rounded-pill" href="./?page=purchases/manage_purchase&id=<?= isset($id) ? $id : '' ?>"><i class="fa fa-edit"></i> Edit</a>
+				<a href="./?page=purchases/print_details&id=<?= isset($id) ? $id : '' ?>" class="btn btn-light bg-gradient-light border flex-fill text-nowrap mx-1 mb-2 rounded-pill" target="_blank"><i class="fa fa-print"></i> Print</a>
                 <?php if($_settings->userdata('type') == 1) { ?>
-					<button class="btn btn-danger bg-gradient-danger border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="delete_purchase" type="button"><i class="fa fa-trash"></i> Delete Purchase</button>
+					<button class="btn btn-danger bg-gradient-danger border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="delete_purchase" type="button"><i class="fa fa-trash"></i> Delete Purchase</button>
 				<?php }?>
-				<button class="btn btn-primary bg-gradient-navy border col-lg-3 col-md-4 col-sm-12 col-xs-12 rounded-pill" id="share" onclick="sendWhatsapp('<?= isset($contact) ? $contact : '' ?>','<?php echo base_url ?>admin?page=purchases/print_details&id=<?= isset($id) ? $id : '' ?>')" type="button">Share</button>
+				<button class="btn btn-primary bg-gradient-navy border flex-fill text-nowrap mx-1 mb-2 rounded-pill" id="share" onclick="sendWhatsapp('<?= isset($contact) ? $contact : '' ?>','<?php echo base_url ?>admin?page=purchases/print_details&id=<?= isset($id) ? $id : '' ?>')" type="button">Share</button>
             </div>
         </div>
     </div>
